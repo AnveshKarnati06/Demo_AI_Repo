@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Northstar IT Operations Command Center
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css">
+
+</head>
+
+<body>
+
+    <main class="app-shell">
+
+        <!-- HEADER -->
+
+        <header class="app-header">
+
+            <div class="brand-mark">
+                NS
+            </div>
+
+            <div class="header-content">
+
+                <p class="eyebrow">
+                    NORTHSTAR ENTERPRISE SERVICES
+                </p>
+
+                <h1>
+                    IT Operations Command Center
+                </h1>
+
+                <p class="subtitle">
+                    Asset Management • Service Operations • Knowledge Intelligence
+                </p>
+
+            </div>
+
+            <div class="status-pill">
+                ● Local AI Assistant Online
+            </div>
+
+        </header>
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard-grid">
+
+            <div class="dashboard-card assets-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        💻
+                    </div>
+
+                    <div class="card-tag">
+                        Assets
+                    </div>
+
+                </div>
+
+                <div class="metric-number">
+                    4
+                </div>
+
+                <div class="metric-title">
+                    Total Assets
+                </div>
+
+                <div class="metric-description">
+                    Registered enterprise devices
+                </div>
+
+                <div class="progress-bar">
+                    <span style="width:85%"></span>
+                </div>
+
+            </div>
+
+            <div class="dashboard-card tickets-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        🎫
+                    </div>
+
+                    <div class="card-tag">
+                        Tickets
+                    </div>
+
+                </div>
+
+                <div class="metric-number">
+                    4
+                </div>
+
+                <div class="metric-title">
+                    Service Tickets
+                </div>
+
+                <div class="metric-description">
+                    Active training service tickets
+                </div>
+
+                <div class="progress-bar">
+                    <span style="width:72%"></span>
+                </div>
+
+            </div>
+
+            <div class="dashboard-card teams-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        👨‍💻
+                    </div>
+
+                    <div class="card-tag">
+                        Teams
+                    </div>
+
+                </div>
+
+                <div class="metric-number">
+                    4
+                </div>
+
+                <div class="metric-title">
+                    Support Teams
+                </div>
+
+                <div class="metric-description">
+                    Operational support functions
+                </div>
+
+                <div class="progress-bar">
+                    <span style="width:90%"></span>
+                </div>
+
+            </div>
+
+            <div class="dashboard-card knowledge-card">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        📚
+                    </div>
+
+                    <div class="card-tag">
+                        Knowledge
+                    </div>
+
+                </div>
+
+                <div class="metric-number">
+                    6
+                </div>
+
+                <div class="metric-title">
+                    Knowledge Articles
+                </div>
+
+                <div class="metric-description">
+                    IT Operations Guide sections
+                </div>
+
+                <div class="progress-bar">
+                    <span style="width:96%"></span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- NOTICE -->
+
+        <section class="notice">
+
+            <strong>
+                Training Environment:
+            </strong>
+
+            All assets, tickets, employees and
+            policies used in this application are fictional.
+            Incident reports remain drafts only and are never
+            submitted to a live ITSM platform.
+
+        </section>
+
+        <!-- CHAT -->
+
+        <section class="chat-card">
+
+            <div class="chat-heading">
+
+                <div>
+
+                    <h2>
+                        Operations Assistant
+                    </h2>
+
+                    <p>
+                        Ask questions in natural language.
+                    </p>
+
+                </div>
+
+                <button
+                    id="clearButton"
+                    class="button button-secondary">
+
+                    Clear Chat
+
+                </button>
+
+            </div>
+
+            <div
+                id="chatMessages"
+                class="chat-messages">
+
+                <article class="message assistant-message">
+
+                    <div class="message-avatar">
+                        AI
+                    </div>
+
+                    <div class="message-content">
+
+                        <span class="message-role">
+                            Assistant
+                        </span>
+
+                        <p>
+                            Welcome to the IT Operations Command Center.
+                            I can help with assets, tickets, support teams,
+                            IT operations policies and incident drafts.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div
+                id="typingIndicator"
+                class="typing-indicator"
+                hidden>
+
+                Assistant is processing your request...
+
+            </div>
+
+            <form
+                id="chatForm"
+                class="composer">
+
+                <textarea
+                    id="messageInput"
+                    rows="2"
+                    placeholder="Example: Check INC-2041 and explain the escalation process."
+                    required></textarea>
+
+                <button
+                    id="sendButton"
+                    type="submit"
+                    class="button button-primary">
+
+                    Send
+
+                </button>
+
+            </form>
+
+            <div class="quick-actions">
+
+                <button
+                    class="chip"
+                    type="button"
+                    data-prompt="Show details for AST-1002.">
+
+                    Asset Lookup
+
+                </button>
+
+                <button
+                    class="chip"
+                    type="button"
+                    data-prompt="What is the status of INC-2041?">
+
+                    Check Ticket
+
+                </button>
+
+                <button
+                    class="chip"
+                    type="button"
+                    data-prompt="List all support teams.">
+
+                    Support Teams
+
+                </button>
+
+                <button
+                    class="chip"
+                    type="button"
+                    data-prompt="What is the laptop replacement policy?">
+
+                    Laptop Policy
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ACTIVITY -->
+
+        <details class="activity-panel">
+
+            <summary>
+                Operations Audit Trail
+            </summary>
+
+            <ol
+                id="activityList"
+                class="activity-list">
+
+                <li>
+                    No activity yet.
+                </li>
+
+            </ol>
+
+        </details>
+
+        <footer class="app-footer">
+
+            Northstar Enterprise Services •
+            FastAPI •
+            Ollama •
+            RAG •
+            Agentic AI
+
+        </footer>
+
+    </main>
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>

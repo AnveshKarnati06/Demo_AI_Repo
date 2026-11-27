@@ -1,0 +1,713 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(37,99,235,.25),
+        transparent 35%
+    ),
+    linear-gradient(
+        135deg,
+        #020617 0%,
+        #0f172a 55%,
+        #1e293b 100%
+    );
+
+    color:#f8fafc;
+}
+
+
+/* ==========================================
+   APP CONTAINER
+========================================== */
+
+.app-shell{
+
+    width:min(1200px,95%);
+
+    margin:30px auto;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.app-header{
+
+    background:
+    rgba(17,24,39,.93);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.25);
+}
+
+.brand-mark{
+
+    width:68px;
+    height:68px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    font-size:24px;
+    font-weight:800;
+}
+
+.eyebrow{
+
+    color:#06b6d4;
+
+    letter-spacing:2px;
+
+    font-size:11px;
+
+    font-weight:700;
+}
+
+.header-content h1{
+
+    font-size:42px;
+
+    margin:4px 0;
+}
+
+.subtitle{
+
+    color:#94a3b8;
+}
+
+.status-pill{
+
+    margin-left:auto;
+
+    background:
+    rgba(16,185,129,.18);
+
+    color:#10b981;
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    border:
+    1px solid rgba(16,185,129,.25);
+}
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard-grid{
+
+    margin:24px 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.dashboard-card{
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(17,24,39,.95),
+        rgba(30,41,59,.95)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:22px;
+
+    transition:
+        all .25s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+.dashboard-card:hover{
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.35);
+}
+
+.card-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+}
+
+.card-icon{
+
+    width:62px;
+    height:62px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+
+    font-size:28px;
+}
+
+.assets-card .card-icon{
+
+    background:
+    linear-gradient(
+        135deg,
+        #06b6d4,
+        #0891b2
+    );
+}
+
+.tickets-card .card-icon{
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+}
+
+.teams-card .card-icon{
+
+    background:
+    linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+}
+
+.knowledge-card .card-icon{
+
+    background:
+    linear-gradient(
+        135deg,
+        #f59e0b,
+        #d97706
+    );
+}
+
+.card-tag{
+
+    color:#94a3b8;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    padding:6px 10px;
+
+    border-radius:999px;
+}
+
+.metric-number{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-bottom:8px;
+}
+
+.metric-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+}
+
+.metric-description{
+
+    color:#94a3b8;
+
+    min-height:40px;
+
+    line-height:1.5;
+
+    font-size:14px;
+}
+
+.progress-bar{
+
+    height:8px;
+
+    margin-top:18px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-radius:999px;
+
+    overflow:hidden;
+}
+
+.progress-bar span{
+
+    display:block;
+
+    height:100%;
+}
+
+.assets-card .progress-bar span{
+
+    background:#06b6d4;
+}
+
+.tickets-card .progress-bar span{
+
+    background:#2563eb;
+}
+
+.teams-card .progress-bar span{
+
+    background:#10b981;
+}
+
+.knowledge-card .progress-bar span{
+
+    background:#f59e0b;
+}
+
+
+/* ==========================================
+   NOTICE
+========================================== */
+
+.notice{
+
+    background:
+    rgba(245,158,11,.12);
+
+    border:
+    1px solid rgba(245,158,11,.25);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    line-height:1.7;
+
+    margin-bottom:24px;
+
+    color:#fde68a;
+}
+
+
+/* ==========================================
+   CHAT CARD
+========================================== */
+
+.chat-card{
+
+    background:
+    rgba(17,24,39,.93);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    overflow:hidden;
+}
+
+.chat-heading{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+.chat-heading p{
+
+    color:#94a3b8;
+
+    margin-top:6px;
+}
+
+
+/* ==========================================
+   MESSAGES
+========================================== */
+
+.chat-messages{
+
+    height:450px;
+
+    overflow-y:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:22px;
+}
+
+.message{
+
+    display:flex;
+
+    gap:12px;
+
+    max-width:80%;
+}
+
+.user-message{
+
+    align-self:flex-end;
+
+    flex-direction:row-reverse;
+}
+
+.message-avatar{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:12px;
+
+    font-size:11px;
+
+    font-weight:800;
+}
+
+.assistant-message .message-avatar{
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+}
+
+.user-message .message-avatar{
+
+    background:
+    linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+}
+
+.message-content{
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+
+    border-radius:16px;
+
+    padding:14px 16px;
+}
+
+.message-role{
+
+    display:block;
+
+    color:#94a3b8;
+
+    font-size:11px;
+
+    margin-bottom:5px;
+
+    text-transform:uppercase;
+
+    font-weight:700;
+}
+
+.message-content p{
+
+    line-height:1.6;
+
+    white-space:pre-wrap;
+}
+
+
+/* ==========================================
+   COMPOSER
+========================================== */
+
+.composer{
+
+    display:flex;
+
+    gap:12px;
+
+    padding:20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+.composer textarea{
+
+    flex:1;
+
+    background:
+    #0f172a;
+
+    color:white;
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    border-radius:14px;
+
+    padding:14px;
+
+    outline:none;
+}
+
+.composer textarea:focus{
+
+    border-color:#2563eb;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button{
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:14px;
+
+    padding:12px 18px;
+
+    font-weight:700;
+}
+
+.button-primary{
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    color:white;
+}
+
+.button-secondary{
+
+    background:
+    rgba(255,255,255,.08);
+
+    color:white;
+}
+
+
+/* ==========================================
+   CHIPS
+========================================== */
+
+.quick-actions{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:0 20px 20px;
+}
+
+.chip{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:10px 14px;
+
+    border-radius:999px;
+
+    background:
+    rgba(37,99,235,.12);
+
+    color:white;
+}
+
+.chip:hover{
+
+    background:
+    rgba(37,99,235,.25);
+}
+
+
+/* ==========================================
+   ACTIVITY PANEL
+========================================== */
+
+.activity-panel{
+
+    margin-top:18px;
+
+    background:
+    rgba(17,24,39,.93);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:18px;
+}
+
+.activity-panel summary{
+
+    cursor:pointer;
+
+    color:#06b6d4;
+
+    font-weight:700;
+}
+
+.activity-list{
+
+    margin-top:10px;
+
+    padding-left:20px;
+
+    line-height:1.8;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.app-footer{
+
+    text-align:center;
+
+    margin:24px 0;
+
+    color:#94a3b8;
+
+    font-size:13px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .app-header{
+
+        flex-wrap:wrap;
+    }
+
+    .status-pill{
+
+        margin-left:0;
+    }
+
+    .message{
+
+        max-width:100%;
+    }
+
+    .composer{
+
+        flex-direction:column;
+    }
+}
